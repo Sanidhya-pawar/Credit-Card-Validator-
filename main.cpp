@@ -1,23 +1,24 @@
 #include <iostream>
+using namespace std;
 
 int getDigit(const int number);
-int sumOddDigits(const std::string cardNumber);
-int sumEvenDigits(const std::string cardNumber);
+int sumOddDigits(const string cardNumber);
+int sumEvenDigits(const string cardNumber);
 int main()
 {
-    std::string cardNumber;
+    string cardNumber;
     int result = 0;
 
-    std::cout << "Enter a credit card #: ";
-    std::cin >> cardNumber;
+    cout << "Enter a credit card #: ";
+    cin >> cardNumber;
 
     result = sumEvenDigits(cardNumber) + sumOddDigits(cardNumber);
 
     if(result % 10 == 0){
-        std::cout << cardNumber << " is valid";
+        cout << cardNumber << " is valid";
     }
     else{
-        std::cout << cardNumber << " is not valid";
+        cout << cardNumber << " is not valid";
     }
 
 	return 0;
@@ -26,7 +27,7 @@ int getDigit(const int number){
 
     return number % 10 + (number / 10 % 10);
 }
-int sumOddDigits(const std::string cardNumber){
+int sumOddDigits(const string cardNumber){
 
     int sum = 0;
 
@@ -36,7 +37,7 @@ int sumOddDigits(const std::string cardNumber){
 
     return sum;
 }
-int sumEvenDigits(const std::string cardNumber){
+int sumEvenDigits(const string cardNumber){
 
     int sum = 0;
 
